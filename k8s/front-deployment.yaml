@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: library-front
+  template:
+    metadata:
+      labels:
+        app: library-front
+    spec:
+      containers:
+      - name: front-container
+        image: kangmartin/library-front:v1
+        ports:
+        - containerPort: 80
