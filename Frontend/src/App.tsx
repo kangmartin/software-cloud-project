@@ -9,7 +9,7 @@ function App() {
 
   useEffect(() => {
     // Appel relatif : l'Ingress ou le Proxy Vite se chargera du routing
-    fetch('/books')
+    fetch('/api/books')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>📚 Library Management System</h1>
+      <h1>📚 Library Management System !!</h1>
       
       {loading && <p>Loading books...</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}

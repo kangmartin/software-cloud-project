@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: front-container
-        image: kangmartin/library-front:1
+        image: kangmartin/library-front:latest
         ports:
         - containerPort: 80
