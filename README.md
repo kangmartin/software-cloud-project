@@ -39,19 +39,7 @@ Service communication summary:
 - `book-service` targets backend pods (`book-app`)
 - Frontend calls backend only through Ingress using `/api/books`
 
-## 3) Docker images pulled by Kubernetes
-
-From the current Kubernetes manifests:
-- Backend image: `kangmartin/book-service:1`
-- Frontend image: `kangmartin/library-front:latest`
-
-These images are hosted on Docker Hub (repository namespace: `kangmartin`) and are pulled by Kubernetes when pods start.
-
-How pull works in this project:
-- Kubernetes pulls images when pods are created.
-
-
-## 4) Kubernetes files explained
+## 3) Kubernetes files explained
 
 ### `k8s/book-deployment.yaml`
 - Backend Deployment
